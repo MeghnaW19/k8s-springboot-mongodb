@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.stackroute</groupId>
+        <artifactId>k8s-springboot-mongodb</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.stackroute</groupId>
+    <artifactId>user-service</artifactId>
+    <properties>
+        <java.version>11</java.version>
+        <!--        <docker.image.prefix>meghnanvt</docker.image.prefix>-->
+        <!--        <docker.image.name>service-app</docker.image.name>-->
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!--            <plugin>-->
+            <!--                <groupId>io.fabric8</groupId>-->
+            <!--                <artifactId>docker-maven-plugin</artifactId>-->
+            <!--                <version>0.33.0</version>-->
+            <!--                <configuration>-->
+            <!--                    <dockerHost>unix:///var/run/docker.sock</dockerHost>-->
+            <!--                    <verbose>true</verbose>-->
+            <!--                    <images>-->
+            <!--                        <image>-->
+            <!--                            <name>${docker.image.prefix}/${docker.image.name}</name>-->
+            <!--                            <build>-->
+            <!--                                <dockerFileDir>${project.basedir}</dockerFileDir>-->
+            <!--                                &lt;!&ndash;copies artficact to docker build dir in target&ndash;&gt;-->
+            <!--                                <assembly>-->
+            <!--                                    <descriptorRef>artifact</descriptorRef>-->
+            <!--                                </assembly>-->
+            <!--                                <tags>-->
+            <!--                                    <tag>1.0.1</tag>-->
+            <!--                                </tags>-->
+            <!--                            </build>-->
+            <!--                        </image>-->
+            <!--                    </images>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
+        </plugins>
+    </build>
+
+
+</project>

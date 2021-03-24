@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: user-service
+  data:
+    mongodb:
+      #specify the mongodb deployment name as host
+      uri: mongodb://<host>:27017/userDb
+    datasource:
+      driver-class-name: mongodb.jdbc.MongoDriver
+
+app:
+  exceptionMessage: User already exists!
+  globalExceptionMessage: Database connectivity lost!
+

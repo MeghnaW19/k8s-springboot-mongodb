@@ -1,0 +1,9 @@
+#Define a deployment named `userservice-deployment` by using the image pushed to Docker Hub
+#Use container port 8080.
+apiVersion: apps/v1
+
+---
+#Define a service named `userservice-svc` of type NodePort and use the above created deployment as selector
+apiVersion: v1
+
+
